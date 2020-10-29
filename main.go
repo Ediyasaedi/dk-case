@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
-	
+
 	"github.com/ediyasaedi/dk-case/database"
 	"github.com/ediyasaedi/dk-case/user"
 	"github.com/gofiber/fiber"
@@ -55,7 +55,7 @@ func main(){
 
 	setupRoutes(app)
 
-	err := app.Listen(3000)
+	err := app.Listen(os.Getenv("PORT"))
 	if err != nil {
 		panic(err)
 	}
